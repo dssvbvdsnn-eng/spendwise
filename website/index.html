@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SpendWise — اعرف فلوسك راحت فين</title>
+  <meta name="description" content="تطبيق أندرويد أوفلاين لتتبع المصاريف والميزانية. حدد ميزانية شهرك، سجّل مصاريفك في ثوانٍ، وشوف تقارير ستة أشهر — بياناتك على جهازك فقط.">
+  <meta name="theme-color" content="#2E4B3D">
+  <meta property="og:title" content="SpendWise — اعرف فلوسك راحت فين">
+  <meta property="og:description" content="ميزانية شهرية، تسجيل سريع، تقارير ستة أشهر، وخصوصية كاملة. تطبيق أندرويد أوفلاين بدون حسابات أو تتبع.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ar_EG">
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/IBMPlexSansArabic-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/IBMPlexSansArabic-Bold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/demo.css">
+  <noscript>
+    <style>
+      .reveal { opacity: 1; transform: none; }
+    </style>
+  </noscript>
+</head>
+<body>
+  <a class="skip-link" href="#main">تخطَّ إلى المحتوى</a>
+
+  <svg class="svg-sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-logo" viewBox="0 0 48 48">
+      <rect width="48" height="48" rx="14" fill="#2E4B3D"/>
+      <path d="M12.5 17.5l5.5 13.5 6-10 6 10 5.5-13.5" fill="none" stroke="#F5EEE1" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="35.5" cy="15.5" r="3.4" fill="#D8C198"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24">
+      <path d="M19 12H5m6-6-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-android" viewBox="0 0 24 24">
+      <path d="M7 10h10v6a3 3 0 0 1-3 3h-4a3 3 0 0 1-3-3v-6Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="m9 7-1.4-2M15 7l1.4-2M7 12.5H5.2M7 15.5H5.2M17 12.5h1.8M17 15.5h1.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <circle cx="10" cy="11.6" r=".7" fill="currentColor"/>
+      <circle cx="14" cy="11.6" r=".7" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <path d="m20 6.5-11 11-5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24">
+      <path d="M12 3.2 19 6v5.2c0 4.4-3 7.4-7 8.8-4-1.4-7-4.4-7-8.8V6l7-2.8Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+      <path d="m8.8 11.8 2.1 2.1 4.3-4.3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24">
+      <rect x="5" y="10.5" width="14" height="9.5" rx="2.4" fill="none" stroke="currentColor" stroke-width="1.7"/>
+      <path d="M8.2 10.5V8a3.8 3.8 0 0 1 7.6 0v2.5M12 14.3v2.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-cloud-off" viewBox="0 0 24 24">
+      <path d="M6.5 18h10a4 4 0 0 0 1.2-7.8A5.5 5.5 0 0 0 8.8 7.5M5.4 9.6A4.5 4.5 0 0 0 6.5 18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+      <path d="m4 4 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24">
+      <path d="M13.4 2.5 4.8 13.6h5.8l-1 7.9 8.6-11.1h-5.8l1-7.9Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-search" viewBox="0 0 24 24">
+      <circle cx="11" cy="11" r="6.4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="m16 16 4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-undo" viewBox="0 0 24 24">
+      <path d="M8.5 14.5 4 10l4.5-4.5M4 10h9.2a6.3 6.3 0 0 1 0 12.6h-2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24">
+      <path d="M4 20V10M10 20V4m6 16v-7m6 7V7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-wallet" viewBox="0 0 24 24">
+      <path d="M4 7.5A2.5 2.5 0 0 1 6.5 5H18a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6.5A2.5 2.5 0 0 1 4 17.5v-10Z" fill="none" stroke="currentColor" stroke-width="1.7"/>
+      <path d="M4 8h16M15 13.5h2.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24">
+      <path d="M6.2 10.5a5.8 5.8 0 0 1 11.6 0c0 4 1.4 5.6 2 6.2H4.2c.6-.6 2-2.2 2-6.2Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+      <path d="M10 19.2a2.1 2.1 0 0 0 4 0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-home" viewBox="0 0 24 24">
+      <path d="m4 10.8 8-6.6 8 6.6V19a1.6 1.6 0 0 1-1.6 1.6H5.6A1.6 1.6 0 0 1 4 19v-8.2Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+      <path d="M9.5 20.6v-5.8h5v5.8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-list" viewBox="0 0 24 24">
+      <path d="M8.5 6h11M8.5 12h11M8.5 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24">
+      <path d="M4 7h6M14 7h6M4 17h10M18 17h2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+      <circle cx="12" cy="7" r="2.1" fill="none" stroke="currentColor" stroke-width="1.7"/>
+      <circle cx="16" cy="17" r="2.1" fill="none" stroke="currentColor" stroke-width="1.7"/>
+    </symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24">
+      <path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24">
+      <path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-chevron-start" viewBox="0 0 24 24">
+      <path d="m14 6-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-chevron-end" viewBox="0 0 24 24">
+      <path d="m10 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24">
+      <path d="M4 5h2l2.2 10.2a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L21 8H7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="10" cy="20" r="1.2" fill="currentColor"/>
+      <circle cx="18" cy="20" r="1.2" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-bus" viewBox="0 0 24 24">
+      <rect x="5" y="4" width="14" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/>
+      <path d="M5 11h14M8 18v2m8-2v2M8.5 14.5h.01M15.5 14.5h.01" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-coffee" viewBox="0 0 24 24">
+      <path d="M5 8h11v5.5A4.5 4.5 0 0 1 11.5 18h-2A4.5 4.5 0 0 1 5 13.5V8Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+      <path d="M16 9h1.8a2.2 2.2 0 0 1 0 4.4H16M7 4.5c0 .7.8.7.8 1.4M11 4.5c0 .7.8.7.8 1.4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-banknote" viewBox="0 0 24 24">
+      <rect x="3.5" y="6.5" width="17" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/>
+      <circle cx="12" cy="12" r="2.4" fill="none" stroke="currentColor" stroke-width="1.7"/>
+      <path d="M7 10v4m10-4v4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-target" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.7"/>
+      <circle cx="12" cy="12" r="3.4" fill="none" stroke="currentColor" stroke-width="1.7"/>
+      <circle cx="12" cy="12" r=".9" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-receipt" viewBox="0 0 24 24">
+      <path d="M6 3.5h12v17l-2-1.3-2 1.3-2-1.3-2 1.3-2-1.3-2 1.3v-17Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M9 8h6M9 12h6M9 16h3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24">
+      <path d="M12 3.5c.7 4.6 3.4 7.3 8 8-4.6.7-7.3 3.4-8 8-.7-4.6-3.4-7.3-8-8 4.6-.7 7.3-3.4 8-8Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24">
+      <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24">
+      <path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24">
+      <path d="M4.5 7h15M9.5 7V5.2A1.2 1.2 0 0 1 10.7 4h2.6a1.2 1.2 0 0 1 1.2 1.2V7M7 7l.8 12a1.6 1.6 0 0 0 1.6 1.5h5.2a1.6 1.6 0 0 0 1.6-1.5L17 7M10.2 10.5v6M13.8 10.5v6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-status" viewBox="0 0 50 12">
+      <rect x="0" y="7" width="2.6" height="4" rx="0.8" fill="currentColor"/>
+      <rect x="4.4" y="5" width="2.6" height="6" rx="0.8" fill="currentColor"/>
+      <rect x="8.8" y="3" width="2.6" height="8" rx="0.8" fill="currentColor"/>
+      <rect x="13.2" y="1" width="2.6" height="10" rx="0.8" fill="currentColor"/>
+      <path d="M21 5.2a6.4 6.4 0 0 1 7.6 0M22.7 7.6a3.8 3.8 0 0 1 4.2 0M24.8 10.2h.01" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+      <rect x="34" y="2.5" width="12" height="7" rx="2" fill="none" stroke="currentColor" stroke-width="1.1"/>
+      <rect x="35.6" y="4.1" width="7.4" height="3.8" rx="1" fill="currentColor"/>
+      <path d="M47 5v2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="SpendWise — العودة للأعلى">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><use href="#i-logo"></use></svg>
+        </span>
+        <span class="brand-copy">
+          <span class="brand-name" dir="ltr">SpendWise</span>
+          <span class="brand-tagline">فلوسك، بذكاء</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="primary-nav" aria-label="التنقل الرئيسي">
+        <a href="#features">المميزات</a>
+        <a href="#tour">جولة في التطبيق</a>
+        <a href="#demo">التجربة</a>
+        <a href="#privacy">الخصوصية</a>
+        <a href="#faq">الأسئلة</a>
+        <a class="btn btn-primary btn-sm nav-cta" href="#get">قريبًا على أندرويد</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-primary btn-sm header-cta" href="#get">
+          <svg class="icon" aria-hidden="true"><use href="#i-android"></use></svg>
+          قريبًا على أندرويد
+        </a>
+        <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="فتح القائمة">
+          <svg class="icon icon-menu" aria-hidden="true"><use href="#i-menu"></use></svg>
+          <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              تطبيق أندرويد أوفلاين بالكامل
+              <span class="eyebrow-version" dir="ltr">v1.0.0</span>
+            </p>
+            <h1>اعرف فلوسك<br><span class="highlight">راحت فين.</span></h1>
+            <p class="lead">
+              SpendWise بيحط ميزانية شهرك قدامك، يسجّل مصاريفك في ثواني، ويوريك
+              بالظبط فاضل لك كام — النهارده والشهر كله. أوفلاين، بدون حساب،
+              وبياناتك على جهازك.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary btn-lg" href="#demo">
+                جرّب التطبيق دلوقتي
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+              </a>
+              <a class="btn btn-soft btn-lg" href="#features">اكتشف المميزات</a>
+            </div>
+            <ul class="trust-list" role="list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>من غير حساب</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-cloud-off"></use></svg>من غير إنترنت</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg>بياناتك معاك</li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="hero-arch"></div>
+            <div class="hero-ring"></div>
+
+            <div class="float-card float-alert">
+              <span class="float-icon float-icon-gold">
+                <svg class="icon" aria-hidden="true"><use href="#i-bell"></use></svg>
+              </span>
+              <div>
+                <strong>ميزانية السوبر ماركت</strong>
+                <span>وصلت ٨٢٪ — فاضل ١٨٠ ج.م</span>
+              </div>
+            </div>
+
+            <div class="float-card float-daily">
+              <span class="float-icon float-icon-green">
+                <svg class="icon" aria-hidden="true"><use href="#i-target"></use></svg>
+              </span>
+              <div>
+                <span>المسموح النهارده</span>
+                <strong><bdi>270.04</bdi> <small>ج.م</small></strong>
+              </div>
+            </div>
+
+            <div class="phone phone-hero">
+              <div class="phone-screen">
+                <div class="m-status">
+                  <span class="m-time">9:41</span>
+                  <span class="m-notch" aria-hidden="true"></span>
+                  <span class="m-status-icons"><svg viewBox="0 0 50 12"><use href="#i-status"></use></svg></span>
+                </div>
+
+                <div class="m-appbar">
+                  <div>
+                    <span class="m-kicker">مساء الخير، أحمد</span>
+                    <h2 class="m-title">النظرة العامة</h2>
+                  </div>
+                  <span class="m-round">
+                    <svg class="icon" aria-hidden="true"><use href="#i-bell"></use></svg>
+                  </span>
+                </div>
+
+                <div class="m-month">
+                  <span class="m-month-btn"><svg class="icon" aria-hidden="true"><use href="#i-chevron-start"></use></svg></span>
+                  <span class="m-month-label">نوفمبر 2026</span>
+                  <span class="m-month-btn"><svg class="icon" aria-hidden="true"><use href="#i-chevron-end"></use></svg></span>
+                </div>
+
+                <div class="m-budget">
+                  <div class="m-budget-top">
+                    <span>متبقي من ميزانية نوفمبر</span>
+                    <span class="m-badge">٦٨٪</span>
+                  </div>
+                  <div class="m-budget-amount"><bdi>3,240.50</bdi> <small>ج.م</small></div>
+                  <div class="m-progress"><span style="width:68%"></span></div>
+                  <div class="m-budget-meta">
+                    <span>صرفت <bdi>6,759.50</bdi></span>
+                    <span>من <bdi>10,000.00</bdi></span>
+                  </div>
+                </div>
+
+                <div class="m-stat-row">
+                  <div class="m-stat">
+                    <span class="m-stat-icon m-icon-terra"><svg class="icon" aria-hidden="true"><use href="#i-receipt"></use></svg></span>
+                    <span class="m-stat-label">المصاريف</span>
+                    <span class="m-stat-amount"><bdi>6,759.50</bdi></span>
+                  </div>
+                  <div class="m-stat">
+                    <span class="m-stat-icon m-icon-green"><svg class="icon" aria-hidden="true"><use href="#i-banknote"></use></svg></span>
+                    <span class="m-stat-label">الدخل</span>
+                    <span class="m-stat-amount"><bdi>8,500.00</bdi></span>
+                  </div>
+                </div>
+
+                <div class="m-spark-card">
+                  <div class="m-section-head">
+                    <span>إيقاع الصرف اليومي</span>
+                    <span class="m-link">نوفمبر</span>
+                  </div>
+                  <svg class="m-spark" viewBox="0 0 240 58" preserveAspectRatio="none">
+                    <path d="M2 46h236M2 26h236" fill="none" stroke="#DCD4C5" stroke-width="1" stroke-dasharray="3 5"/>
+                    <path d="M2 44c18-2 26-16 42-13s22 12 36 8 24-20 40-16 20 12 34 8 24-14 36-11 22 10 48 4" fill="none" stroke="#33584A" stroke-width="2.2" stroke-linecap="round"/>
+                    <path d="M2 44c18-2 26-16 42-13s22 12 36 8 24-20 40-16 20 12 34 8 24-14 36-11 22 10 48 4v34H2Z" fill="rgba(51,88,74,.09)"/>
+                  </svg>
+                </div>
+
+                <div class="m-section-head m-section-head-rows">
+                  <span>آخر العمليات</span>
+                  <span class="m-link">الكل</span>
+                </div>
+                <div class="m-rows">
+                  <div class="m-row">
+                    <span class="m-row-icon m-row-icon-green"><svg class="icon" aria-hidden="true"><use href="#i-cart"></use></svg></span>
+                    <span class="m-row-texts"><span class="m-row-title">سوبر ماركت</span><span class="m-row-sub">النهارده · 2:15 م</span></span>
+                    <span class="m-row-amount">−<bdi>420.00</bdi></span>
+                  </div>
+                  <div class="m-row">
+                    <span class="m-row-icon m-row-icon-gold"><svg class="icon" aria-hidden="true"><use href="#i-bus"></use></svg></span>
+                    <span class="m-row-texts"><span class="m-row-title">مواصلات</span><span class="m-row-sub">النهارده · 8:40 ص</span></span>
+                    <span class="m-row-amount">−<bdi>75.00</bdi></span>
+                  </div>
+                  <div class="m-row">
+                    <span class="m-row-icon m-row-icon-terra"><svg class="icon" aria-hidden="true"><use href="#i-coffee"></use></svg></span>
+                    <span class="m-row-texts"><span class="m-row-title">قهوة</span><span class="m-row-sub">أمس · 6:20 م</span></span>
+                    <span class="m-row-amount">−<bdi>55.00</bdi></span>
+                  </div>
+                </div>
+
+                <div class="m-nav">
+                  <span class="m-nav-item is-active"><span class="m-nav-indicator"><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg></span><span>الرئيسية</span></span>
+                  <span class="m-nav-item"><span class="m-nav-indicator"><svg class="icon" aria-hidden="true"><use href="#i-list"></use></svg></span><span>المعاملات</span></span>
+                  <span class="m-nav-item"><span class="m-nav-indicator"><svg class="icon" aria-hidden="true"><use href="#i-chart"></use></svg></span><span>التقارير</span></span>
+                  <span class="m-nav-item"><span class="m-nav-indicator"><svg class="icon" aria-hidden="true"><use href="#i-wallet"></use></svg></span><span>الميزانية</span></span>
+                  <span class="m-nav-item"><span class="m-nav-indicator"><svg class="icon" aria-hidden="true"><use href="#i-sliders"></use></svg></span><span>الإعدادات</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-strip">
+          <div class="stat">
+            <span class="stat-value" data-count="0">0</span>
+            <span class="stat-label">طلبات شبكة في نسخة الإصدار</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value" data-count="6">6</span>
+            <span class="stat-label">شهور في كل تقرير</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value" data-count="310">310</span>
+            <span class="stat-label">اختبار آلي ناجح</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value" data-count="100">100<span class="stat-suffix">٪</span></span>
+            <span class="stat-label">بياناتك على جهازك</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section features" id="features">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow eyebrow-plain">المميزات</p>
+          <h2>مش محتاج جدول معقد.<br>محتاج تعرف أرقامك.</h2>
+          <p class="section-lead">
+            من أول مصروف لحد تقرير الستة شهور — SpendWise بيخلي المتابعة سهلة،
+            سريعة، ومن غير أي ضوضاء.
+          </p>
+        </header>
+
+        <div class="bento">
+          <article class="feature feature-quick reveal" style="--d:.05s">
+            <div class="feature-copy">
+              <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-bolt"></use></svg></span>
+              <h3>إضافة في ثانية</h3>
+              <p>اكتب المبلغ، اختار الفئة، واحفظ. أو كرر آخر عملية بضغطة — مفيش خطوات زيادة.</p>
+            </div>
+            <div class="quick-demo" aria-hidden="true">
+              <div class="qs-grabber"></div>
+              <div class="qs-title">إضافة سريعة</div>
+              <div class="qs-segment"><span class="is-active">مصروف</span><span>دخل</span></div>
+              <div class="qs-amount"><bdi>420.00</bdi> <small>ج.م</small></div>
+              <div class="qs-fields">
+                <span class="qs-field"><span class="qs-field-label">الفئة</span><span class="qs-field-value"><svg class="icon" aria-hidden="true"><use href="#i-cart"></use></svg>سوبر ماركت</span></span>
+                <span class="qs-field"><span class="qs-field-label">التاريخ</span><span class="qs-field-value">النهارده</span></span>
+              </div>
+              <div class="qs-save">حفظ المصروف</div>
+            </div>
+          </article>
+
+          <article class="feature feature-undo reveal" style="--d:.1s">
+            <div class="feature-copy">
+              <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-undo"></use></svg></span>
+              <h3>غلطت؟ تراجع.</h3>
+              <p>مسحت عملية بالغلط؟ عندك 10 ثواني ترجّعها زي ما كانت، بنفس تفاصيلها.</p>
+            </div>
+            <div class="undo-demo" aria-hidden="true">
+              <div class="undo-snack">
+                <span class="undo-snack-icon"><svg class="icon"><use href="#i-coffee"></use></svg></span>
+                <span class="undo-snack-text">تم حذف «قهوة»<small>العملية رجعت في مكانها خلال 10 ثواني</small></span>
+                <span class="undo-action">تراجع</span>
+                <span class="undo-clock">10</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="feature feature-search reveal" style="--d:.15s">
+            <div class="feature-copy">
+              <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg></span>
+              <h3>بحث يفهمك</h3>
+              <p>دوّر في الملاحظات، الفئة، الشهر، أو نطاق المبلغ — ووصل للعملية اللي بتدور عليها.</p>
+            </div>
+            <div class="search-demo" aria-hidden="true">
+              <div class="search-field">
+                <svg class="icon"><use href="#i-search"></use></svg>
+                <span>قهوة</span>
+                <span class="search-caret"></span>
+              </div>
+              <div class="filter-chips">
+                <span class="filter-chip is-active">مصاريف <b>×</b></span>
+                <span class="filter-chip">نوفمبر <b>×</b></span>
+                <span class="filter-chip filter-chip-add">+ فلتر</span>
+              </div>
+              <div class="search-result">
+                <span class="m-row-icon m-row-icon-terra"><svg class="icon"><use href="#i-coffee"></use></svg></span>
+                <span class="m-row-texts"><span class="m-row-title">قهوة الصبح</span><span class="m-row-sub">اليوم · مشروبات</span></span>
+                <span class="m-row-amount">−<bdi>55.00</bdi></span>
+              </div>
+            </div>
+          </article>
+
+          <article class="feature feature-reports reveal" style="--d:.2s">
+            <div class="feature-copy">
+              <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-chart"></use></svg></span>
+              <h3>شوف 6 شهور في نظرة</h3>
+              <p>تقارير شهرية، مقارنة بالشهر اللي فات، أعلى يوم صرف، ومتوسطك اليومي — بأرقام واضحة.</p>
+            </div>
+            <div class="report-demo" aria-hidden="true">
+              <div class="report-legend">
+                <span><i class="dot dot-exp"></i>مصاريف</span>
+                <span><i class="dot dot-inc"></i>دخل</span>
+                <span class="report-total">الصافي <bdi>+1,740.00</bdi></span>
+              </div>
+              <div class="bar-chart">
+                <div class="bar-group"><i class="bar bar-exp" style="--h:42%"></i><i class="bar bar-inc" style="--h:64%"></i><span>يونيو</span></div>
+                <div class="bar-group"><i class="bar bar-exp" style="--h:56%"></i><i class="bar bar-inc" style="--h:62%"></i><span>يوليو</span></div>
+                <div class="bar-group"><i class="bar bar-exp" style="--h:38%"></i><i class="bar bar-inc" style="--h:57%"></i><span>أغسطس</span></div>
+                <div class="bar-group"><i class="bar bar-exp" style="--h:68%"></i><i class="bar bar-inc" style="--h:60%"></i><span>سبتمبر</span></div>
+                <div class="bar-group"><i class="bar bar-exp" style="--h:52%"></i><i class="bar bar-inc" style="--h:70%"></i><span>أكتوبر</span></div>
+                <div class="bar-group is-current"><i class="bar bar-exp" style="--h:61%"></i><i class="bar bar-inc" style="--h:78%"></i><span>نوفمبر</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="feature feature-budget reveal" style="--d:.25s">
+            <div class="feature-copy">
+              <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-wallet"></use></svg></span>
+              <h3>ميزانية لكل فئة</h3>
+              <p>حدد حدود للسوبر ماركت، المواصلات، أو القهوة. SpendWise ينبهك قبل ما تعدي.</p>
+            </div>
+            <div class="budget-demo" aria-hidden="true">
+              <div class="budget-row">
+                <span class="budget-name"><span class="m-row-icon m-row-icon-green"><svg class="icon"><use href="#i-cart"></use></svg></span>سوبر ماركت</span>
+                <span class="budget-nums"><bdi>1,820</bdi> / <bdi>2,000</bdi></span>
+                <span class="budget-bar"><i style="width:91%"></i></span>
+              </div>
+              <div class="budget-row">
+                <span class="budget-name"><span class="m-row-icon m-row-icon-gold"><svg class="icon"><use href="#i-bus"></use></svg></span>مواصلات</span>
+                <span class="budget-nums"><bdi>410</bdi> / <bdi>800</bdi></span>
+                <span class="budget-bar"><i style="width:51%"></i></span>
+              </div>
+              <div class="budget-row is-over">
+                <span class="budget-name"><span class="m-row-icon m-row-icon-terra"><svg class="icon"><use href="#i-coffee"></use></svg></span>قهوة</span>
+                <span class="budget-nums"><bdi>320</bdi> / <bdi>200</bdi></span>
+                <span class="budget-bar"><i style="width:100%"></i></span>
+                <span class="budget-over">تجاوزت بـ <bdi>120</bdi> ج.م</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="feature feature-alert reveal" style="--d:.3s">
+            <div class="feature-copy">
+              <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-bell"></use></svg></span>
+              <h3>تنبيهات على قدك</h3>
+              <p>تنبيه عند 80٪ من الميزانية، وتنبيه لو تعديتها، ومراجعة أسبوعية كل جمعة. محلية واختيارية.</p>
+            </div>
+            <div class="alert-demo" aria-hidden="true">
+              <div class="alert-notification">
+                <span class="alert-app-icon"><svg class="icon"><use href="#i-logo"></use></svg></span>
+                <div class="alert-content">
+                  <div class="alert-head"><strong>SpendWise</strong><span>الآن</span></div>
+                  <p>وصلت 82٪ من ميزانية السوبر ماركت — فاضل 180 ج.م.</p>
+                </div>
+                <span class="alert-ring">82<small>٪</small></span>
+              </div>
+              <div class="alert-notification alert-notification-muted">
+                <span class="alert-app-icon"><svg class="icon"><use href="#i-logo"></use></svg></span>
+                <div class="alert-content">
+                  <div class="alert-head"><strong>SpendWise</strong><span>بعد 3 ساعات</span></div>
+                  <p>مراجعة الأسبوع: صرفت 1,140 ج.م من أول الجمعة.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tour-section" id="tour">
+      <div class="container">
+        <header class="section-head section-head-center reveal">
+          <p class="eyebrow eyebrow-plain">جولة في التطبيق</p>
+          <h2>ثلاث شاشات.<br>الموضوع كله واضح.</h2>
+          <p class="section-lead">تنقّل بين الشاشات وشوف إزاي SpendWise بيرتّب يومك المالي.</p>
+        </header>
+
+        <div class="tour-shell reveal">
+          <div class="tour-tabs" role="tablist" aria-label="شاشات التطبيق">
+            <button class="tour-tab is-active" id="tab-overview" role="tab" aria-selected="true" aria-controls="panel-overview" tabindex="0" type="button">
+              <svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg>النظرة العامة
+            </button>
+            <button class="tour-tab" id="tab-transactions" role="tab" aria-selected="false" aria-controls="panel-transactions" tabindex="-1" type="button">
+              <svg class="icon" aria-hidden="true"><use href="#i-list"></use></svg>المعاملات
+            </button>
+            <button class="tour-tab" id="tab-reports" role="tab" aria-selected="false" aria-controls="panel-reports" tabindex="-1" type="button">
+              <svg class="icon" aria-hidden="true"><use href="#i-chart"></use></svg>التقارير
+            </button>
+          </div>
+
+          <div class="tour-panel" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview" tabindex="0">
+            <div class="tour-visual" aria-hidden="true">
+              <div class="tour-phone-wrap">
+                <div class="phone phone-tour">
+                  <div class="phone-screen">
+                    <div class="m-status">
+                      <span class="m-time">9:41</span>
+                      <span class="m-notch" aria-hidden="true"></span>
+                      <span class="m-status-icons"><svg viewBox="0 0 50 12"><use href="#i-status"></use></svg></span>
+                    </div>
+                    <div class="m-appbar">
+                      <div><span class="m-kicker">مساء الخير، أحمد</span><h2 class="m-title">النظرة العامة</h2></div>
+                      <span class="m-round"><svg class="icon"><use href="#i-bell"></use></svg></span>
+                    </div>
+                    <div class="m-month">
+                      <span class="m-month-btn"><svg class="icon"><use href="#i-chevron-start"></use></svg></span>
+                      <span class="m-month-label">نوفمبر 2026</span>
+                      <span class="m-month-btn"><svg class="icon"><use href="#i-chevron-end"></use></svg></span>
+                    </div>
+                    <div class="m-budget">
+                      <div class="m-budget-top"><span>متبقي من ميزانية نوفمبر</span><span class="m-badge">٦٨٪</span></div>
+                      <div class="m-budget-amount"><bdi>3,240.50</bdi> <small>ج.م</small></div>
+                      <div class="m-progress"><span style="width:68%"></span></div>
+                      <div class="m-budget-meta"><span>صرفت <bdi>6,759.50</bdi></span><span>من <bdi>10,000.00</bdi></span></div>
+                    </div>
+                    <div class="m-daily">
+                      <div class="m-daily-top">
+                        <span class="m-daily-icon"><svg class="icon"><use href="#i-target"></use></svg></span>
+                        <span><small>المسموح يوميًا</small><strong><bdi>270.04</bdi> ج.م</strong></span>
+                        <span class="m-daily-left">فاضل 12 يوم</span>
+                      </div>
+                      <div class="m-daily-legend"><span>صرفت النهارده <bdi>118.00</bdi></span><span>الهدف <bdi>270.04</bdi></span></div>
+                      <div class="m-progress m-progress-thin"><span style="width:44%"></span></div>
+                    </div>
+                    <div class="m-breakdown">
+                      <div class="m-section-head"><span>توزيع الفئات</span><span class="m-link">نوفمبر</span></div>
+                      <div class="m-breakdown-row"><span class="m-legend m-legend-green"></span><span>سوبر ماركت</span><b><bdi>1,820</bdi> <small>ج.م</small></b></div>
+                      <div class="m-breakdown-row"><span class="m-legend m-legend-gold"></span><span>مواصلات</span><b><bdi>410</bdi> <small>ج.م</small></b></div>
+                      <div class="m-breakdown-row"><span class="m-legend m-legend-terra"></span><span>قهوة ومطاعم</span><b><bdi>320</bdi> <small>ج.م</small></b></div>
+                    </div>
+                    <div class="m-nav">
+                      <span class="m-nav-item is-active"><span class="m-nav-indicator"><svg class="icon"><use href="#i-home"></use></svg></span><span>الرئيسية</span></span>
+                      <span class="m-nav-item"><span class="m-nav-indicator"><svg class="icon"><use href="#i-list"></use></svg></span><span>المعاملات</span></span>
+                      <span class="m-nav-item"><span class="m-nav-indicator"><svg class="icon"><use href="#i-chart"></use></svg></span><span>التقارير</span></span>
+                      <span class="m-nav-item"><span class="m-nav-indicator"><svg class="icon"><use href="#i-wallet"></use></svg></span><span>الميزانية</span></span>
+                      <span class="m-nav-item"><span class="m-nav-indicator"><svg class="icon"><use href="#i-sliders"></use></svg></span><span>الإعدادات</span></span>
+                    </div>
+                  </div>
+                </div>
+                <span class="tour-badge tour-badge-one">ميزانية الشهر + المتبقي</span>
+                <span class="tour-badge tour-badge-two">المسموح يوميًا</span>
+              </div>
+            </div>
+            <div class="tour-copy">
+              <p class="tour-kicker">01 — النظرة العامة</p>
+              <h3>شاشتك الرئيسية في سطرين.</h3>
+              <p>ميزانية الشهر، المصروف، المتبقي، والمسموح يوميًا — كله محسوب من نفس الأرقام، من غير تناقض ومن غير حسابات على ورقة.</p>
+              <ul class="check-list">
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>ميزانية الشهر وشريط الاستخدام</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>مسموح يومي على أساس الأيام المتبقية</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>إيقاع الصرف وتوزيع الفئات</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>بدّل الشهر من مكان واحد</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tour-panel" id="panel-transactions" role="tabpanel" aria-labelledby="tab-transactions" tabindex="0" hidden>
+            <div class="tour-visual" aria-hidden="true">
+              <div class="tour-phone-wrap">
+                <div class="phone phone-tour">
+                  <div class="phone-screen">
+                    <div class="m-status">
+                      <span class="m-time">9:41</span>
+                      <span class="m-notch" aria-hidden="true"></span>
+                      <span class="m-status-icons"><svg viewBox="0 0 50 12"><use href="#i-status"></use></svg></span>
+                    </div>
+                    <div class="m-appbar">
+                      <div><span class="m-kicker">نوفمبر 2026</span><h2 class="m-title">المعاملات</h2></div>
+                      <span class="m-round m-round-dark"><svg class="icon"><use href="#i-plus"></use></svg></span>
+                    </div>
+                    <div class="m-search"><svg class="icon"><use href="#i-search"></use></svg><span>ابحث في ملاحظاتك…</span></div>
+                    <div class="m-filter-chips"><span class="m-filter-chip is-active">الكل</span><span class="m-filter-chip">مصاريف</span><span class="m-filter-chip">دخل</span><span class="m-filter-chip">فلاتر <b>2</b></span></div>
+                    <div class="m-tx-summary"><span>مصاريف نوفمبر</span><strong><bdi>6,759.50</bdi> ج.م</strong></div>
+                    <div class="m-group-label">النهارده</div>
+                    <div class="m-rows">
+                      <div class="m-row">
+                        <span class="m-row-icon m-row-icon-green"><svg class="icon"><use href="#i-cart"></use></svg></span>
+                        <span class="m-row-texts"><span class="m-row-title">سوبر ماركت</span><span class="m-row-sub">بقالة الأسبوع</span></span>
+                        <span class="m-row-amount">−<bdi>420.00</bdi></span>
+                      </div>
+                      <div class="m-row">
+                        <span class="m-row-icon m-row-icon-gold"><svg class="icon"><use href="#i-bus"></use></svg></span>
+                        <span class="m-row-texts"><span class="m-row-title">مواصلات</span><span class="m-row-sub">مشاوير الشغل</span></span>
+                        <span class="m-row-amount">−<bdi>75.00</bdi></span>
+                      </div>
+                      <div class="m-row">
+                        <span class="m-row-icon m-row-icon-terra"><svg class="icon"><use href="#i-coffee"></use></svg></span>
+                        <span class="m-row-texts"><span class="m-row-title">قهوة</span><span class="m-row-sub">مع الفريق</span></span>
+                        <span class="m-row-amount">−<bdi>55.00</bdi></span>
+                      </div>
+                    </div>
+                    <div class="m-group-label">أمس</div>
+                    <div class="m-rows">
+                      <div class="m-row">
+                        <span class="m-row-icon m-row-icon-green"><svg class="icon"><use href="#i-banknote"></use></svg></span>
+                        <span class="m-row-texts"><span class="m-row-title">دفعة مشروع</span><span class="m-row-sub">دخل · تحويل</span></span>
+                        <span class="m-row-amount is-income">+<bdi>2,500.00</bdi></span>
+                      </div>
+                      <div class="m-row">
+                        <span class="m-row-icon m-row-icon-green"><svg class="icon"><use href="#i-cart"></use></svg></span>
+                        <span class="m-row-texts"><span class="m-row-title">خضار وفاكهة</span><span class="m-row-sub">سوق الحي</span></span>
+                        <span class="m-row-amount">−<bdi>130.00</bdi></span>
+                      </div>
+                    </div>
+                    <span class="m-fab"><svg class="icon"><use href="#i-plus"></use></svg></span>
+                    <div class="m-nav">
+                      <span class="m-nav-item"><span class="m-nav-indicator"><svg class="icon"><use href="#i-home"></use></svg></span><span>الرئيسية</span></span>
+                      <span class="m-nav-item is-active"><span class="m-nav-indicator"><svg class="icon"><use href="#i-list"></use></svg></span><span>المعاملات</span></span>
+                      <span class="m-nav-item"><span class="m-nav-indicator"><svg class="icon"><use href="#i-chart"></use></svg></span><span>التقارير</span></span>
+                      <span class="m-nav-item"><span class="m-nav-indicator"><svg class="icon"><use href="#i-wallet"></use></svg></span><span>الميزانية</span></span>
+                      <span class="m-nav-item"><span class="m-nav-indicator"><svg class="icon"><use href="#i-sliders"></use></svg></span><span>الإعدادات</span></span>
+                    </div>
+                  </div>
+                </div>
+                <span class="tour-badge tour-badge-one">بحث وفلاتر متقدمة</span>
+                <span class="tour-badge tour-badge-two">تراجع عن الحذف</span>
+              </div>
+            </div>
+            <div class="tour-copy">
+              <p class="tour-kicker">02 — المعاملات</p>
+              <h3>كل عملية ليها مكان.</h3>
+              <p>سجّل مصروف أو دخل، عدّل، ابحث، وامسح بأمان مع تراجع. الفلاتر بتخلي الوصول لأي عملية أسرع، حتى لو عندك مئات العمليات.</p>
+              <ul class="check-list">
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>إضافة سريعة أو تكرار آخر عملية</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>بحث متقدم وفلاتر للنوع والفئة والمبلغ</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>تعديل وحذف مع تراجع 10 ثواني</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>تفاصيل كل فئة وإجمالياتها</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tour-panel" id="panel-reports" role="tabpanel" aria-labelledby="tab-reports" tabindex="0" hidden>
+            <div class="tour-visual" aria-hidden="true">
+              <div class="tour-phone-wrap">
+                <div class="phone phone-tour">
+                  <div class="phone-screen">
+                    <div class="m-status">
+                      <span class="m-time">9:41</span>
+                      <span class="m-notch" aria-hidden="true"></span>
+                      <span class="m-status-icons"><svg viewBox="0 0 50 12"><use href="#i-status"></use></svg></span>
+                    </div>
+                    <div class="m-appbar">
+                      <div><span class="m-kicker">آخر 6 شهور</span><h2 class="m-title">التقارير</h2></div>
+                      <span class="m-round"><svg class="icon"><use href="#i-chart"></use></svg></span>
+                    </div>
+                    <div class="m-report-hero">
+                      <span>إجمالي مصاريف الفترة</span>
+                      <strong><bdi>31,480.00</bdi> <small>ج.م</small></strong>
+                      <span class="m-report-delta">أقل من الفترة اللي فاتت بـ <bdi>9٪</bdi></span>
+                    </div>
+                    <div class="m-chart-card">
+                      <div class="m-section-head"><span>الدخل والمصاريف</span><span class="m-link">6 شهور</span></div>
+                      <div class="m-legend-row"><span><i class="dot dot-exp"></i>مصاريف</span><span><i class="dot dot-inc"></i>دخل</span></div>
+                      <div class="m-bar-chart">
+                        <div class="m-bar-group"><i class="bar bar-exp" style="--h:44%"></i><i class="bar bar-inc" style="--h:66%"></i><span>يونيو</span></div>
+                        <div class="m-bar-group"><i class="bar bar-exp" style="--h:58%"></i><i class="bar bar-inc" style="--h:60%"></i><span>يوليو</span></div>
+                        <div class="m-bar-group"><i class="bar bar-exp" style="--h:40%"></i><i class="bar bar-inc" style="--h:56%"></i><span>أغسطس</span></div>
+                        <div class="m-bar-group"><i class="bar bar-exp" style="--h:70%"></i><i class="bar bar-inc" style="--h:59%"></i><span>سبتمبر</span></div>
+                        <div class="m-bar-group"><i class="bar bar-exp" style="--h:54%"></i><i class="bar bar-inc" style="--h:72%"></i><span>أكتوبر</span></div>
+                        <div class="m-bar-group is-current"><i class="bar bar-exp" style="--h:63%"></i><i class="bar bar-inc" style="--h:80%"></i><span>نوفمبر</span></div>
+                      </div>
+                    </div>
+                    <div class="m-report-cards">
+                      <div class="m-report-mini"><span>أعلى يوم صرف</span><strong>السبت · <bdi>640</bdi></strong></div>
+                      <div class="m-report-mini"><span>متوسط اليوم</span><strong><bdi>225.30</bdi> ج.م</strong></div>
+                    </div>
+                    <div class="m-breakdown">
+                      <div class="m-section-head"><span>أكبر الفئات</span><span class="m-link">نوفمبر</span></div>
+                      <div class="m-breakdown-row"><span class="m-legend m-legend-green"></span><span>سوبر ماركت</span><b>27٪</b></div>
+                      <div class="m-breakdown-row"><span class="m-legend m-legend-gold"></span><span>فواتير</span><b>19٪</b></div>
+                      <div class="m-breakdown-row"><span class="m-legend m-legend-terra"></span><span>قهوة ومطاعم</span><b>12٪</b></div>
+                    </div>
+                    <div class="m-nav">
+                      <span class="m-nav-item"><span class="m-nav-indicator"><svg class="icon"><use href="#i-home"></use></svg></span><span>الرئيسية</span></span>
+                      <span class="m-nav-item"><span class="m-nav-indicator"><svg class="icon"><use href="#i-list"></use></svg></span><span>المعاملات</span></span>
+                      <span class="m-nav-item is-active"><span class="m-nav-indicator"><svg class="icon"><use href="#i-chart"></use></svg></span><span>التقارير</span></span>
+                      <span class="m-nav-item"><span class="m-nav-indicator"><svg class="icon"><use href="#i-wallet"></use></svg></span><span>الميزانية</span></span>
+                      <span class="m-nav-item"><span class="m-nav-indicator"><svg class="icon"><use href="#i-sliders"></use></svg></span><span>الإعدادات</span></span>
+                    </div>
+                  </div>
+                </div>
+                <span class="tour-badge tour-badge-one">مقارنة شهر بشهر</span>
+                <span class="tour-badge tour-badge-two">متوسط وأعلى يوم</span>
+              </div>
+            </div>
+            <div class="tour-copy">
+              <p class="tour-kicker">03 — التقارير</p>
+              <h3>الأرقام بتحكي.</h3>
+              <p>ستة شهور قدامك: الدخل، المصروف، نسبة استخدام الميزانية، متوسط اليوم، وأعلى يوم صرف — مع مقارنة واضحة بالشهر اللي فات.</p>
+              <ul class="check-list">
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>بطاقات شهرية ورسم اتجاه</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>مقارنة شهر بشهر</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>توزيع الفئات وأكبر بنود الصرف</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>تصدير CSV آمن للمعادلات</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section demo-section" id="demo" aria-labelledby="demo-heading">
+      <div class="container">
+        <header class="section-head section-head-center reveal">
+          <p class="eyebrow eyebrow-plain">نسخة تجريبية</p>
+          <h2 id="demo-heading">جرّب SpendWise<br>من غير تحميل.</h2>
+          <p class="section-lead">
+            نسخة مصغّرة شغالة هنا في المتصفح: سجّل مصروف، امسح عملية وارجّعها، ابحث
+            وفلتر، وغيّر ميزانية الشهر — وكل الأرقام بتتحسب لحظيًا زي التطبيق.
+            دي بيانات عرض وهمية، مش بتتسجل ولا بتخرج من الصفحة.
+          </p>
+        </header>
+
+        <div class="demo-shell reveal">
+          <div class="demo-decoration" aria-hidden="true">
+            <span class="demo-orbit demo-orbit-one"></span>
+            <span class="demo-orbit demo-orbit-two"></span>
+          </div>
+
+          <div class="demo-grid">
+            <div class="demo-stage">
+              <div class="demo-phone-wrap">
+                <span class="demo-float demo-float-one" aria-hidden="true">
+                  <svg class="icon" aria-hidden="true"><use href="#i-undo"></use></svg>
+                  تراجع 10 ثواني
+                </span>
+                <span class="demo-float demo-float-two" aria-hidden="true">
+                  <svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg>
+                  بيانات محلية
+                </span>
+
+                <div class="phone phone-demo" role="group" aria-label="نسخة تجريبية تفاعلية من تطبيق SpendWise" aria-describedby="demo-disclaimer">
+                  <div class="phone-screen">
+                    <div class="m-status">
+                      <span class="m-time">9:41</span>
+                      <span class="m-notch" aria-hidden="true"></span>
+                      <span class="m-status-icons"><svg viewBox="0 0 50 12" aria-hidden="true"><use href="#i-status"></use></svg></span>
+                    </div>
+
+                    <div class="demo-views">
+                      <section class="demo-view" id="demo-panel-overview" role="tabpanel" aria-labelledby="demo-tab-overview" tabindex="0">
+                        <div class="demo-view-scroll">
+                          <div class="m-appbar">
+                            <div>
+                              <span class="m-kicker">مساء الخير، أحمد</span>
+                              <h3 class="m-title">النظرة العامة</h3>
+                            </div>
+                            <button class="m-round demo-bell" type="button" aria-label="اعرف نصيحة عن ميزانية الشهر">
+                              <svg class="icon" aria-hidden="true"><use href="#i-bell"></use></svg>
+                            </button>
+                          </div>
+
+                          <div class="demo-month">
+                            <span class="m-month-label">نوفمبر 2026</span>
+                            <span class="demo-live"><span class="demo-live-dot" aria-hidden="true"></span>أرقام حيّة</span>
+                          </div>
+
+                          <div class="m-budget" data-demo-budget-card>
+                            <div class="m-budget-top">
+                              <span data-demo="remaining-label">متبقي من ميزانية نوفمبر</span>
+                              <span class="m-badge" data-demo="badge">68%</span>
+                            </div>
+                            <div class="m-budget-amount"><bdi data-demo="remaining">3,240.50</bdi> <small>ج.م</small></div>
+                            <div class="m-progress"><span data-demo="progress" style="width:68%"></span></div>
+                            <div class="m-budget-meta">
+                              <span>صرفت <bdi data-demo="spent">6,759.50</bdi></span>
+                              <span>من <bdi data-demo="budget-total">10,000.00</bdi></span>
+                            </div>
+                          </div>
+
+                          <div class="m-stat-row">
+                            <div class="m-stat">
+                              <span class="m-stat-icon m-icon-terra"><svg class="icon" aria-hidden="true"><use href="#i-receipt"></use></svg></span>
+                              <span class="m-stat-label">المصاريف</span>
+                              <span class="m-stat-amount"><bdi data-demo="expense-total">6,759.50</bdi></span>
+                            </div>
+                            <div class="m-stat">
+                              <span class="m-stat-icon m-icon-green"><svg class="icon" aria-hidden="true"><use href="#i-banknote"></use></svg></span>
+                              <span class="m-stat-label">الدخل</span>
+                              <span class="m-stat-amount"><bdi data-demo="income-total">8,500.00</bdi></span>
+                            </div>
+                          </div>
+
+                          <div class="m-daily">
+                            <div class="m-daily-top">
+                              <span class="m-daily-icon"><svg class="icon" aria-hidden="true"><use href="#i-target"></use></svg></span>
+                              <span><small>المسموح النهارده</small><strong><bdi data-demo="daily">270.04</bdi> ج.م</strong></span>
+                              <span class="m-daily-left"><bdi data-demo="days-left">12</bdi> يوم فاضل</span>
+                            </div>
+                            <div class="m-daily-legend">
+                              <span>صرفت النهارده <bdi data-demo="today-spent">60.00</bdi></span>
+                              <span>الهدف <bdi data-demo="daily">270.04</bdi></span>
+                            </div>
+                            <div class="m-progress m-progress-thin"><span data-demo="today-progress" style="width:22%"></span></div>
+                          </div>
+
+                          <div class="m-spark-card">
+                            <div class="m-section-head"><span>إيقاع الصرف اليومي</span><span class="m-link">نوفمبر</span></div>
+                            <svg class="m-spark demo-spark" viewBox="0 0 240 58" preserveAspectRatio="none" aria-hidden="true">
+                              <path class="demo-spark-grid" d="M2 46h236M2 26h236" fill="none" stroke="#DCD4C5" stroke-width="1" stroke-dasharray="3 5"/>
+                              <path class="demo-spark-area" id="demo-spark-area" d=""/>
+                              <path class="demo-spark-line" id="demo-spark-line" d=""/>
+                            </svg>
+                            <p class="demo-chart-caption" id="demo-chart-caption">آخر 19 يوم — بيتحدّث مع كل عملية.</p>
+                          </div>
+
+                          <div class="m-breakdown">
+                            <div class="m-section-head"><span>أكبر الفئات</span><span class="m-link">نوفمبر</span></div>
+                            <div id="demo-overview-categories"></div>
+                          </div>
+
+                          <div class="m-section-head m-section-head-rows">
+                            <span>آخر العمليات</span>
+                            <button class="m-link demo-text-btn" type="button" data-demo-goto="transactions">الكل</button>
+                          </div>
+                          <div class="m-rows demo-recent" id="demo-recent"></div>
+                        </div>
+                      </section>
+
+                      <section class="demo-view" id="demo-panel-transactions" role="tabpanel" aria-labelledby="demo-tab-transactions" tabindex="0" hidden>
+                        <div class="demo-view-scroll demo-tx-scroll">
+                          <div class="m-appbar">
+                            <div>
+                              <span class="m-kicker">نوفمبر 2026</span>
+                              <h3 class="m-title">المعاملات</h3>
+                            </div>
+                            <span class="demo-live"><span class="demo-live-dot" aria-hidden="true"></span>أرقام حيّة</span>
+                          </div>
+
+                          <label class="m-search demo-search">
+                            <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+                            <input type="search" id="demo-search" placeholder="ابحث بالفئة أو الملاحظة…" aria-label="ابحث في المعاملات" autocomplete="off">
+                          </label>
+
+                          <div class="m-filter-chips demo-filters" role="group" aria-label="فلتر المعاملات">
+                            <button class="m-filter-chip is-active" type="button" data-demo-filter="all" aria-pressed="true">الكل</button>
+                            <button class="m-filter-chip" type="button" data-demo-filter="expense" aria-pressed="false">مصاريف</button>
+                            <button class="m-filter-chip" type="button" data-demo-filter="income" aria-pressed="false">دخل</button>
+                          </div>
+
+                          <div class="m-tx-summary">
+                            <span>مصاريف نوفمبر</span>
+                            <strong><bdi data-demo="expense-total">6,759.50</bdi> ج.م</strong>
+                          </div>
+
+                          <p class="demo-result-count" id="demo-result-count" role="status" aria-live="polite">23 عملية</p>
+                          <div id="demo-tx-list"></div>
+                          <p class="demo-empty" id="demo-empty" hidden>مفيش عمليات مطابقة. جرّب كلمة تانية أو غيّر الفلتر.</p>
+                        </div>
+                        <button class="m-fab demo-fab" type="button" data-demo-add aria-label="إضافة عملية جديدة" aria-haspopup="dialog">
+                          <svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg>
+                        </button>
+                      </section>
+
+                      <section class="demo-view" id="demo-panel-reports" role="tabpanel" aria-labelledby="demo-tab-reports" tabindex="0" hidden>
+                        <div class="demo-view-scroll">
+                          <div class="m-appbar">
+                            <div>
+                              <span class="m-kicker">آخر 6 شهور</span>
+                              <h3 class="m-title">التقارير</h3>
+                            </div>
+                            <span class="m-round"><svg class="icon" aria-hidden="true"><use href="#i-chart"></use></svg></span>
+                          </div>
+
+                          <div class="m-report-hero">
+                            <span>إجمالي مصاريف الفترة</span>
+                            <strong><bdi id="demo-report-total">31,480.00</bdi> <small>ج.م</small></strong>
+                            <span class="m-report-delta" id="demo-report-delta">أعلى من أكتوبر بـ 39٪</span>
+                          </div>
+
+                          <div class="m-chart-card">
+                            <div class="m-section-head"><span>الدخل والمصاريف</span><span class="m-link">6 شهور</span></div>
+                            <div class="m-legend-row"><span><i class="dot dot-exp"></i>مصاريف</span><span><i class="dot dot-inc"></i>دخل</span></div>
+                            <div class="m-bar-chart demo-bar-chart" id="demo-report-chart" role="img" aria-label="رسم أعمدة لمقارنة الدخل والمصاريف خلال آخر ستة شهور"></div>
+                          </div>
+
+                          <div class="m-report-cards">
+                            <div class="m-report-mini"><span>أعلى يوم صرف</span><strong id="demo-top-day">10 نوفمبر · 850.00</strong></div>
+                            <div class="m-report-mini"><span>متوسط اليوم</span><strong><bdi id="demo-avg-day">355.76</bdi> ج.م</strong></div>
+                          </div>
+
+                          <div class="m-breakdown">
+                            <div class="m-section-head"><span>أكبر الفئات</span><span class="m-link">نوفمبر</span></div>
+                            <div id="demo-report-categories"></div>
+                          </div>
+                          <p class="demo-chart-caption">المقارنة بتتحسب من نفس عمليات نوفمبر — جرّب تضيف أو تمسح وشوف الرسم بيتغيّر.</p>
+                        </div>
+                      </section>
+
+                      <section class="demo-view" id="demo-panel-budget" role="tabpanel" aria-labelledby="demo-tab-budget" tabindex="0" hidden>
+                        <div class="demo-view-scroll">
+                          <div class="m-appbar">
+                            <div>
+                              <span class="m-kicker">نوفمبر 2026</span>
+                              <h3 class="m-title">الميزانية</h3>
+                            </div>
+                            <span class="m-round"><svg class="icon" aria-hidden="true"><use href="#i-wallet"></use></svg></span>
+                          </div>
+
+                          <form class="demo-budget-form" id="demo-budget-form" novalidate>
+                            <label class="demo-field-label" for="demo-budget-input">ميزانية الشهر (ج.م)</label>
+                            <div class="demo-budget-row">
+                              <input class="demo-input" id="demo-budget-input" name="budget" type="text" inputmode="decimal" autocomplete="off" value="10000.00" aria-describedby="demo-budget-hint demo-budget-error">
+                              <button class="demo-primary-btn demo-budget-save" type="submit">حفظ</button>
+                            </div>
+                            <p class="demo-field-error" id="demo-budget-error" role="alert" hidden></p>
+                            <p class="demo-field-hint" id="demo-budget-hint">فاضل 3,240.50 ج.م على 12 يوم.</p>
+                            <div class="demo-presets" role="group" aria-label="ميزانيات جاهزة">
+                              <button class="demo-preset" type="button" data-demo-preset="800000">8,000</button>
+                              <button class="demo-preset is-active" type="button" data-demo-preset="1000000">10,000</button>
+                              <button class="demo-preset" type="button" data-demo-preset="1200000">12,000</button>
+                            </div>
+                          </form>
+
+                          <div class="m-budget" data-demo-budget-card>
+                            <div class="m-budget-top">
+                              <span data-demo="remaining-label">متبقي من ميزانية نوفمبر</span>
+                              <span class="m-badge" data-demo="badge">68%</span>
+                            </div>
+                            <div class="m-budget-amount"><bdi data-demo="remaining">3,240.50</bdi> <small>ج.م</small></div>
+                            <div class="m-progress"><span data-demo="progress" style="width:68%"></span></div>
+                            <div class="m-budget-meta">
+                              <span>صرفت <bdi data-demo="spent">6,759.50</bdi></span>
+                              <span>من <bdi data-demo="budget-total">10,000.00</bdi></span>
+                            </div>
+                          </div>
+
+                          <div class="m-section-head demo-cat-head">
+                            <span>ميزانيات الفئات</span>
+                            <span class="m-link">نوفمبر</span>
+                          </div>
+                          <div class="demo-cat-budgets" id="demo-cat-budgets"></div>
+                          <p class="demo-chart-caption">ميزانيات الفئات مستقلة — وبتتحدث مع كل عملية جديدة.</p>
+                        </div>
+                      </section>
+                    </div>
+
+                    <div class="m-nav demo-nav" role="tablist" aria-label="شاشات النسخة التجريبية">
+                      <button class="m-nav-item is-active demo-tab" id="demo-tab-overview" type="button" role="tab" aria-selected="true" aria-controls="demo-panel-overview" tabindex="0">
+                        <span class="m-nav-indicator"><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg></span>
+                        <span>الرئيسية</span>
+                      </button>
+                      <button class="m-nav-item demo-tab" id="demo-tab-transactions" type="button" role="tab" aria-selected="false" aria-controls="demo-panel-transactions" tabindex="-1">
+                        <span class="m-nav-indicator"><svg class="icon" aria-hidden="true"><use href="#i-list"></use></svg></span>
+                        <span>المعاملات</span>
+                      </button>
+                      <button class="m-nav-item demo-tab" id="demo-tab-reports" type="button" role="tab" aria-selected="false" aria-controls="demo-panel-reports" tabindex="-1">
+                        <span class="m-nav-indicator"><svg class="icon" aria-hidden="true"><use href="#i-chart"></use></svg></span>
+                        <span>التقارير</span>
+                      </button>
+                      <button class="m-nav-item demo-tab" id="demo-tab-budget" type="button" role="tab" aria-selected="false" aria-controls="demo-panel-budget" tabindex="-1">
+                        <span class="m-nav-indicator"><svg class="icon" aria-hidden="true"><use href="#i-wallet"></use></svg></span>
+                        <span>الميزانية</span>
+                      </button>
+                    </div>
+
+                    <div class="demo-sheet" id="demo-sheet" role="dialog" aria-modal="true" aria-labelledby="demo-sheet-title" aria-hidden="true">
+                      <div class="demo-sheet-backdrop" data-demo-sheet-close></div>
+                      <div class="demo-sheet-panel">
+                        <span class="demo-sheet-handle" aria-hidden="true"></span>
+                        <div class="demo-sheet-head">
+                          <div>
+                            <span class="m-kicker">إضافة سريعة</span>
+                            <h3 class="demo-sheet-title" id="demo-sheet-title">عملية جديدة</h3>
+                          </div>
+                          <button class="demo-sheet-close" type="button" data-demo-sheet-close aria-label="إغلاق نافذة الإضافة">
+                            <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+                          </button>
+                        </div>
+
+                        <form class="demo-add-form" id="demo-add-form" novalidate>
+                          <div class="demo-type-toggle" role="group" aria-label="نوع العملية">
+                            <button class="demo-type is-active" type="button" data-demo-type="expense" aria-pressed="true">مصروف</button>
+                            <button class="demo-type" type="button" data-demo-type="income" aria-pressed="false">دخل</button>
+                          </div>
+
+                          <label class="demo-field-label" for="demo-amount">المبلغ (ج.م)</label>
+                          <input class="demo-input demo-amount-input" id="demo-amount" type="text" inputmode="decimal" placeholder="0.00" autocomplete="off" aria-describedby="demo-add-error">
+
+                          <p class="demo-field-error" id="demo-add-error" role="alert" hidden></p>
+
+                          <span class="demo-field-label" id="demo-cat-label">الفئة</span>
+                          <div class="demo-cat-chips" id="demo-cat-chips" role="group" aria-labelledby="demo-cat-label"></div>
+
+                          <label class="demo-field-label" for="demo-note">ملاحظة (اختياري)</label>
+                          <input class="demo-input" id="demo-note" type="text" maxlength="40" placeholder="مثال: قهوة الصبح" autocomplete="off">
+
+                          <div class="demo-sheet-actions">
+                            <button class="demo-primary-btn" type="submit">حفظ العملية</button>
+                            <button class="demo-ghost-btn" type="button" data-demo-sheet-close>إلغاء</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+
+                    <div class="demo-snackbar" id="demo-snackbar" role="status" aria-live="polite">
+                      <span class="demo-snackbar-text" id="demo-snackbar-text"></span>
+                      <button class="demo-snackbar-action" type="button" id="demo-undo" hidden>
+                        تراجع <span class="demo-undo-count" id="demo-undo-count" aria-hidden="true">10</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <aside class="demo-side">
+              <p class="demo-live demo-live-side"><span class="demo-live-dot" aria-hidden="true"></span>شغالة دلوقتي — من غير تحميل</p>
+              <h3>أربع شاشات،<br>وشغّالة فعلاً.</h3>
+              <p class="demo-side-lead">
+                جرّب أهم حاجة في التطبيق بنفسك. كل رقم هنا بيتحسب في المتصفح،
+                ومن غير أي اتصال بالسيرفر.
+              </p>
+              <ol class="demo-tips" role="list">
+                <li>
+                  <span class="demo-tip-icon"><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg></span>
+                  <div><strong>سجّل مصروف في ثواني</strong><span>روح للمعاملات، اضغط +، واملأ المبلغ والفئة.</span></div>
+                </li>
+                <li>
+                  <span class="demo-tip-icon"><svg class="icon" aria-hidden="true"><use href="#i-trash"></use></svg></span>
+                  <div><strong>امسح وارجّع</strong><span>امسح أي عملية وجرّب «تراجع» خلال 10 ثواني.</span></div>
+                </li>
+                <li>
+                  <span class="demo-tip-icon"><svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg></span>
+                  <div><strong>ابحث وفلتر</strong><span>دوّر بالفئة أو الملاحظة، أو اعرض المصاريف لوحدها.</span></div>
+                </li>
+                <li>
+                  <span class="demo-tip-icon"><svg class="icon" aria-hidden="true"><use href="#i-wallet"></use></svg></span>
+                  <div><strong>غيّر ميزانية الشهر</strong><span>جرّب 8,000 أو 12,000 وشوف المتبقي والمسموح يوميًا بيتغيروا.</span></div>
+                </li>
+              </ol>
+              <div class="demo-side-actions">
+                <button class="btn btn-gold demo-reset" type="button" id="demo-reset">
+                  <svg class="icon" aria-hidden="true"><use href="#i-undo"></use></svg>
+                  إعادة ضبط التجربة
+                </button>
+              </div>
+              <p class="demo-side-note" id="demo-disclaimer">
+                <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg>
+                <span>بيانات وهمية للعرض بس — مفيش حفظ ولا إرسال. التطبيق الحقيقي أوفلاين وبيخزّن على جهازك، والنسخة الموقعة لسه قيد التجهيز.</span>
+              </p>
+              <noscript><p class="demo-noscript">التجربة التفاعلية بتحتاج JavaScript — باقي الموقع شغال عادي.</p></noscript>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section privacy-section" id="privacy">
+      <div class="privacy-glow" aria-hidden="true"></div>
+      <div class="container">
+        <div class="privacy-inner">
+          <div class="privacy-copy reveal">
+            <p class="eyebrow eyebrow-gold">الخصوصية مش ميزة إضافية</p>
+            <h2>بياناتك مش سلعة.</h2>
+            <p class="privacy-lead">
+              SpendWise معمول يعمل من غير سيرفر. مفيش حساب، مفيش تحليلات، ومفيش
+              أي طلب شبكة في نسخة الإصدار. بياناتك قاعدة على جهازك — وإنت اللي
+              بتتحكم في نسختها الاحتياطية.
+            </p>
+            <ul class="privacy-list">
+              <li>
+                <span class="privacy-list-icon"><svg class="icon" aria-hidden="true"><use href="#i-cloud-off"></use></svg></span>
+                <div><h3>أوفلاين من الأساس</h3><p>مفيش كود شبكة ولا اعتماد على سيرفر. التطبيق بيفضل شغال حتى من غير نت.</p></div>
+              </li>
+              <li>
+                <span class="privacy-list-icon"><svg class="icon" aria-hidden="true"><use href="#i-receipt"></use></svg></span>
+                <div><h3>نسخة احتياطية بإيدك</h3><p>JSON موثّق أو CSV للجداول — إنت اللي بتصدّر وترجّع، والتطبيق بيعرض المكرر قبل أي كتابة.</p></div>
+              </li>
+              <li>
+                <span class="privacy-list-icon"><svg class="icon" aria-hidden="true"><use href="#i-bell"></use></svg></span>
+                <div><h3>إشعارات محلية اختيارية</h3><p>مفيش Push ومفيش سيرفر. إذن الإشعارات بيتطلبش غير لما تفعّلها بنفسك.</p></div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="privacy-visual reveal" style="--d:.1s" aria-hidden="true">
+            <div class="privacy-orbit privacy-orbit-one"></div>
+            <div class="privacy-orbit privacy-orbit-two"></div>
+            <div class="receipt">
+              <div class="receipt-head">
+                <span class="receipt-brand"><svg class="icon"><use href="#i-logo"></use></svg>SpendWise</span>
+                <span class="receipt-title">فاتورة الخصوصية</span>
+              </div>
+              <div class="receipt-row"><span>سيرفرات</span><b>0</b></div>
+              <div class="receipt-row"><span>حسابات</span><b>0</b></div>
+              <div class="receipt-row"><span>تتبّع أو تحليلات</span><b>0</b></div>
+              <div class="receipt-row"><span>إعلانات</span><b>0</b></div>
+              <div class="receipt-row"><span>صلاحية إنترنت في نسخة الإصدار</span><b>0</b></div>
+              <div class="receipt-total"><span>الإجمالي</span><strong>بياناتك تفضل معاك</strong></div>
+              <div class="receipt-foot">
+                <span class="receipt-barcode"></span>
+                <span class="receipt-note">LOCAL ONLY · NO TRACKING</span>
+              </div>
+            </div>
+            <div class="privacy-seal">
+              <svg class="icon"><use href="#i-shield"></use></svg>
+              <span>خصوصية بالتصميم</span>
+            </div>
+          </div>
+        </div>
+        <p class="privacy-honesty reveal">
+          <strong>بصراحة:</strong> قاعدة البيانات مش مشفرة افتراضيًا. أي حد يوصل
+          لجهازك وهو مفتوح يقدر يقرأها. عشان كده بنقولها واضحة، وبنوفّر نسخة
+          احتياطية تتحكم فيها بنفسك.
+        </p>
+      </div>
+    </section>
+
+    <section class="section steps-section">
+      <div class="container">
+        <header class="section-head section-head-center reveal">
+          <p class="eyebrow eyebrow-plain">البداية</p>
+          <h2>ثلاث خطوات.<br>وبعدها الدنيا أسهل.</h2>
+        </header>
+        <div class="steps">
+          <article class="step reveal" style="--d:.05s">
+            <span class="step-number">01</span>
+            <span class="step-icon"><svg class="icon" aria-hidden="true"><use href="#i-android"></use></svg></span>
+            <h3>نزّل التطبيق</h3>
+            <p>أندرويد 7.0 وأحدث. لسه بنجهّز رابط الإطلاق الرسمي — الإصدار 1.0.0 جاهز وظيفيًا.</p>
+          </article>
+          <article class="step reveal" style="--d:.15s">
+            <span class="step-number">02</span>
+            <span class="step-icon"><svg class="icon" aria-hidden="true"><use href="#i-wallet"></use></svg></span>
+            <h3>حدد ميزانية الشهر</h3>
+            <p>اختار رقمك، ولو حابب حط حدود لكل فئة: سوبر ماركت، مواصلات، قهوة… إلخ.</p>
+          </article>
+          <article class="step reveal" style="--d:.25s">
+            <span class="step-number">03</span>
+            <span class="step-icon"><svg class="icon" aria-hidden="true"><use href="#i-sparkle"></use></svg></span>
+            <h3>سجّل وسيب الباقي</h3>
+            <p>كل عملية في ثواني، والتطبيق يحسب المتبقي والمسموح يوميًا ويوريك تقاريرك.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="faq-layout">
+          <header class="faq-head reveal">
+            <p class="eyebrow eyebrow-plain">الأسئلة الشائعة</p>
+            <h2>أسئلة<br>تستاهل إجابة.</h2>
+            <p class="section-lead">كل حاجة عن البيانات، الأوفلاين، والنسخ الاحتياطي — بصراحة.</p>
+            <div class="faq-note">
+              <svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg>
+              <span>مفيش أرقام بنكية ولا ربط بحسابات. SpendWise أداة تتبع شخصية فقط.</span>
+            </div>
+          </header>
+
+          <div class="faq-list reveal" style="--d:.1s">
+            <details open>
+              <summary>هل SpendWise شغال من غير إنترنت؟<span class="faq-chevron"><svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg></span></summary>
+              <p>أيوه، بالكامل. التطبيق مصمم أوفلاين من الأساس، ونسخة الإصدار مفيهاش صلاحية الإنترنت أصلًا. كل العمليات والتقارير بتشتغل على الجهاز.</p>
+            </details>
+            <details>
+              <summary>هل بياناتي بتترفع على أي سيرفر؟<span class="faq-chevron"><svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg></span></summary>
+              <p>لأ. مفيش سيرفر ولا حسابات ولا تحليلات. كل حاجة في قاعدة بيانات خاصة بالتطبيق على جهازك، ومفيش أي طلب شبكة في النسخة اللي هتتنشر.</p>
+            </details>
+            <details>
+              <summary>لو غيّرت الموبايل أعمل إيه؟<span class="faq-chevron"><svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg></span></summary>
+              <p>من الإعدادات اعمل نسخة JSON احتياطية واحفظها في مكان آمن، وبعدين استرجعها على الجهاز الجديد. الاسترجاع بيعرض عدد المكرر ويسمح بالدمج أو الاستبدال داخل عملية واحدة، ولو حابب بيعمل نسخة قبل الاسترجاع.</p>
+            </details>
+            <details>
+              <summary>هل التطبيق بيدعم اللغة الإنجليزية؟<span class="faq-chevron"><svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg></span></summary>
+              <p>أيوه. العربي هو اللغة الافتراضية، وفيه إنجليزي كامل، مع وضع فاتح وغامق واختيار الخط حسب تفضيل النظام.</p>
+            </details>
+            <details>
+              <summary>هل الإشعارات إجبارية؟<span class="faq-chevron"><svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg></span></summary>
+              <p>لأ. كل التنبيهات اختيارية: تنبيه 80٪، تجاوز الميزانية، حدود الفئات، ومراجعة أسبوعية كل جمعة. لما تفعّلها، أندرويد 13+ هيطلب صلاحية الإشعارات — ومفيش أي إشعار جاي من سيرفر.</p>
+            </details>
+            <details>
+              <summary>هل بياناتي مشفرة؟<span class="faq-chevron"><svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg></span></summary>
+              <p>قاعدة البيانات مش مشفرة في النسخة الحالية. هي محفوظة في مساحة التطبيق الخاصة، لكن أي حد يوصل للجهاز وهو مفتوح يقدر يقرأها. ملفات النسخ الاحتياطي كمان غير مشفرة — احفظها في مكان آمن.</p>
+            </details>
+            <details>
+              <summary>إمتى هينزل على Google Play؟<span class="faq-chevron"><svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg></span></summary>
+              <p>الإصدار 1.0.0 جاهز وظيفيًا ومختبر بالكامل. النشر بيستنى بناء نسخة موقعة بمفتاح المالك. أول ما النسخة دي تكون جاهزة، هيتعلن عن رابط التحميل الرسمي. مفيش رابط تحميل حاليًا.</p>
+            </details>
+            <details>
+              <summary>فيه نسخة iOS أو ويب؟<span class="faq-chevron"><svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg></span></summary>
+              <p>لأ، SpendWise لأندرويد فقط حاليًا. التركيز كامل على تجربة أندرويد محلية وسريعة.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section" id="get">
+      <div class="container">
+        <div class="cta-card reveal">
+          <div class="cta-orbit" aria-hidden="true"></div>
+          <div class="cta-orbit cta-orbit-two" aria-hidden="true"></div>
+          <div class="cta-inner">
+            <p class="eyebrow eyebrow-gold"><span class="eyebrow-dot"></span>الإصدار 1.0.0 · أندرويد 7.0+</p>
+            <h2>ابدأ من أول مصروف.</h2>
+            <p>حدد ميزانية الشهر، وسجّل أول عملية. الباقي SpendWise بيحسبه — وأنت بتشوف فلوسك رايحة فين قبل ما تحتاج تسأل.</p>
+            <div class="cta-actions">
+              <button class="btn btn-gold btn-lg" type="button" data-soon>
+                <svg class="icon" aria-hidden="true"><use href="#i-android"></use></svg>
+                قريبًا على Google Play
+              </button>
+              <a class="btn btn-outline-light btn-lg" href="#features">راجع المميزات</a>
+            </div>
+            <p class="cta-status"><svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg>النسخة الموقعة قيد التجهيز — مفيش رابط تحميل رسمي حاليًا.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#top" aria-label="SpendWise — العودة للأعلى">
+            <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#i-logo"></use></svg></span>
+            <span class="brand-copy"><span class="brand-name" dir="ltr">SpendWise</span><span class="brand-tagline">فلوسك، بذكاء</span></span>
+          </a>
+          <p>اعرف فلوسك راحت فين. تطبيق أندرويد أوفلاين لتتبع المصاريف والميزانية، من HM Development.</p>
+          <span class="footer-badge"><span class="eyebrow-dot"></span>بدون تتبع في هذا الموقع</span>
+        </div>
+        <nav class="footer-col" aria-label="روابط الموقع">
+          <h3>الموقع</h3>
+          <a href="#features">المميزات</a>
+          <a href="#tour">جولة في التطبيق</a>
+          <a href="#privacy">الخصوصية</a>
+          <a href="#faq">الأسئلة الشائعة</a>
+        </nav>
+        <div class="footer-col">
+          <h3>التطبيق</h3>
+          <span>الإصدار 1.0.0</span>
+          <span>أندرويد 7.0 وأحدث</span>
+          <span>عربي / إنجليزي</span>
+          <span>جنيه مصري (EGP)</span>
+        </div>
+        <div class="footer-col">
+          <h3>مبادئنا</h3>
+          <span>أوفلاين بالكامل</span>
+          <span>بدون حساب أو إعلانات</span>
+          <span>نسخ احتياطي محلي</span>
+          <span>بيانات على جهازك</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 HM Development. كل الحقوق محفوظة.</p>
+        <p>SpendWise أداة تتبع شخصية وليست تطبيقًا بنكيًا. الموقع ده لا يستخدم كوكيز أو أدوات تحليل.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite">
+    <span class="toast-icon"><svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg></span>
+    <span class="toast-text">الإطلاق الرسمي قريب — مفيش رابط تحميل رسمي حاليًا.</span>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/demo.js"></script>
+</body>
+</html>
